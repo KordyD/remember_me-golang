@@ -10,6 +10,7 @@ import (
 	"syscall"
 )
 
+// TODO tests
 func main() {
 	cfg := config.MustLoad()
 	log := logger.SetupLogger(cfg.Env)
@@ -17,12 +18,16 @@ func main() {
 		cfg.Host, cfg.Port, cfg.User, cfg.Password, cfg.Name)
 	application := app.New(log, cfg.GRPCPort, psqlInfo, cfg.TokenTTL)
 	go func() {
-		application.GRPCServer.MustRun()
+		application.MustRun()
 	}()
 
 	stop := make(chan os.Signal, 1)
 	signal.Notify(stop, syscall.SIGINT, syscall.SIGTERM)
 	<-stop
-	application.GRPCServer.Stop()
+	err := application.Stop()
+	if err != nil {
+		log.Error("Failed to stop application gracefully", logger.Err(err))
+		os.Exit(1)
+	}
 	log.Info("Gracefully stopped")
 }

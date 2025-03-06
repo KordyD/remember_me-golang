@@ -3,6 +3,7 @@ package auth
 import (
 	"context"
 	"errors"
+	"github.com/google/uuid"
 	"github.com/kordyd/remember_me-golang/protos/gens/go/sso"
 	"github.com/kordyd/remember_me-golang/sso/internal/services/auth"
 	"google.golang.org/grpc"
@@ -36,6 +37,9 @@ func (s serverAPI) Login(ctx context.Context, req *sso.LoginRequest) (*sso.Login
 
 	if req.GetAppId() == "" {
 		return nil, status.Error(codes.InvalidArgument, "missing app_id")
+	}
+	if err := uuid.Validate(req.GetAppId()); err != nil {
+		return nil, status.Error(codes.InvalidArgument, "invalid app_id, need to be uuid")
 	}
 	token, err := s.auth.Login(ctx, req.GetEmail(), req.GetPassword(), req.GetAppId())
 	if err != nil {

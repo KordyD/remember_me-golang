@@ -74,5 +74,4 @@ func (p *Postgres) Close() error {
 		return fmt.Errorf("%s: %w", op, err)
 	}
 	return nil
-	//	TODO to graceful shutdown
 }

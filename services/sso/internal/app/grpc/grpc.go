@@ -44,12 +44,6 @@ func New(log *slog.Logger, port int, authService authgrpc.Auth) *App {
 	}
 }
 
-func (a *App) MustRun() {
-	if err := a.Run(); err != nil {
-		panic(err)
-	}
-}
-
 func (a *App) Run() error {
 	const op = "gRPCApp.Run"
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", a.port))
@@ -70,4 +64,8 @@ func (a *App) Stop() {
 		Info("stopping gRPC server", slog.Int("port", a.port))
 
 	a.gRPCServer.GracefulStop()
+
+	a.log.With(slog.String("op", op)).
+		Info("gRPC server stopped gracefully", slog.Int("port", a.port))
+
 }
