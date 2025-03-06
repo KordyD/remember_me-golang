@@ -65,7 +65,7 @@ func sanitize(a slog.Attr) slog.Attr {
 			a.Value = slog.AnyValue(maskedReq)
 		}
 		if req, ok := a.Value.Any().(*sso.RegisterRequest); ok {
-			maskedReq := &sso.LoginRequest{
+			maskedReq := &sso.RegisterRequest{
 				Email:    req.GetEmail(),
 				Password: maskString(req.GetPassword()),
 			}
