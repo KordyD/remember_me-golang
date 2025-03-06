@@ -33,7 +33,6 @@ func New(log *slog.Logger, port int, authService authgrpc.Auth) *App {
 	grpcServer := grpc.NewServer(grpc.ChainUnaryInterceptor(
 		recovery.UnaryServerInterceptor(recoveryOpts...),
 		logging.UnaryServerInterceptor(logging.LoggerFunc(func(ctx context.Context, level logging.Level, msg string, fields ...any) {
-			// TODO hide credentials
 			log.Log(ctx, slog.Level(level), msg, fields...)
 		}), loggerOpts...)))
 	authgrpc.Register(grpcServer, authService)
