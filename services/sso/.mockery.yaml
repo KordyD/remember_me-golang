@@ -1,0 +1,7 @@
+packages:
+  github.com/kordyd/remember_me-golang/sso/internal/:
+    config:
+      dir: "{{.InterfaceDir}}/mocks"
+      recursive: true
+      all: true
+      outpkg: "mocks"
