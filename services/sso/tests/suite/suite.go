@@ -19,7 +19,7 @@ type Suite struct {
 	Cfg        *config.Config
 }
 
-const configPath = "../../config/config.yml"
+const configPath = "../../config/config.yaml"
 
 func New(t *testing.T) (*Suite, context.Context) {
 	t.Helper()

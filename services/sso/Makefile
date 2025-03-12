@@ -1,7 +1,7 @@
 all: run
 
 run:
-	go run cmd/sso/main.go --config=config/config.yml
+	go run cmd/sso/main.go --config=config/config.yaml
 
 test: test-unit
 
