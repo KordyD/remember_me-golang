@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"github.com/google/uuid"
 	"github.com/jackc/pgerrcode"
-	"github.com/kordyd/remember_me-golang/sso/internal/models"
-	"github.com/kordyd/remember_me-golang/sso/internal/storage"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/models"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/storage"
 	"github.com/lib/pq"
 )
 

@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	models "github.com/kordyd/remember_me-golang/sso/internal/models"
+	models "github.com/kordyd/remember_me-golang/services/sso/internal/models"
 	mock "github.com/stretchr/testify/mock"
 )
 

@@ -4,7 +4,7 @@ import (
 	"github.com/brianvoe/gofakeit"
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/kordyd/remember_me-golang/protos/gens/go/sso"
-	"github.com/kordyd/remember_me-golang/sso/tests/suite"
+	"github.com/kordyd/remember_me-golang/services/sso/tests/suite"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"

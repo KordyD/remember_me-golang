@@ -2,7 +2,7 @@ package event
 
 import (
 	"encoding/json"
-	"github.com/kordyd/remember_me-golang/event_ingestion/pkg/models"
+	"github.com/kordyd/remember_me-golang/services/event_ingestion/pkg/models"
 	"io"
 	"log/slog"
 	"net/http"

@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
-	"github.com/kordyd/remember_me-golang/event_ingestion/internal/rest/event"
+	"github.com/kordyd/remember_me-golang/services/event_ingestion/internal/rest/event"
 	"io"
 	"log/slog"
 	"net/http"

@@ -1,4 +1,4 @@
-module github.com/kordyd/remember_me-golang/sso
+module github.com/kordyd/remember_me-golang/services/sso
 
 go 1.24.0
 
@@ -30,5 +30,3 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	olympos.io/encoding/edn v0.0.0-20201019073823-d3554ca0b0a3 // indirect
 )
-
-replace github.com/kordyd/remember_me-golang/sso => ../sso

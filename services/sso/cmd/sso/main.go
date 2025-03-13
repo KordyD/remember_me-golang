@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/kordyd/remember_me-golang/sso/internal/app"
-	"github.com/kordyd/remember_me-golang/sso/internal/config"
-	"github.com/kordyd/remember_me-golang/sso/internal/logger"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/app"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/config"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/logger"
 	"os"
 	"os/signal"
 	"syscall"

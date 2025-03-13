@@ -2,10 +2,10 @@ package app
 
 import (
 	"fmt"
-	grpcapp "github.com/kordyd/remember_me-golang/sso/internal/app/grpc"
-	"github.com/kordyd/remember_me-golang/sso/internal/logger"
-	"github.com/kordyd/remember_me-golang/sso/internal/services/auth"
-	"github.com/kordyd/remember_me-golang/sso/internal/storage/postgres"
+	grpcapp "github.com/kordyd/remember_me-golang/services/sso/internal/app/grpc"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/logger"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/services/auth"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/storage/postgres"
 	"log/slog"
 	"time"
 )

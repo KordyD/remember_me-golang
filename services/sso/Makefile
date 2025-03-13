@@ -11,3 +11,5 @@ test-unit:
 test-integration:
 	go test $$(go list ./tests/integration/...) -count=1 -v
 
+mocks:
+	go run github.com/vektra/mockery/v2@v2.53.0 --all

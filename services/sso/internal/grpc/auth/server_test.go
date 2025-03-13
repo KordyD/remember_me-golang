@@ -3,12 +3,12 @@ package auth
 import (
 	"context"
 	"errors"
-	"github.com/kordyd/remember_me-golang/sso/internal/services/auth"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/services/auth"
 	"testing"
 
 	"github.com/google/uuid"
 	"github.com/kordyd/remember_me-golang/protos/gens/go/sso"
-	"github.com/kordyd/remember_me-golang/sso/internal/grpc/auth/mocks"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/grpc/auth/mocks"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 	"google.golang.org/grpc/codes"

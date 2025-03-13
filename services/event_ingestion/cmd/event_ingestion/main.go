@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/kordyd/remember_me-golang/event_ingestion/internal/app"
-	"github.com/kordyd/remember_me-golang/event_ingestion/internal/config"
-	"github.com/kordyd/remember_me-golang/event_ingestion/internal/logger"
-	"github.com/kordyd/remember_me-golang/event_ingestion/internal/sender"
+	"github.com/kordyd/remember_me-golang/services/event_ingestion/internal/app"
+	"github.com/kordyd/remember_me-golang/services/event_ingestion/internal/config"
+	"github.com/kordyd/remember_me-golang/services/event_ingestion/internal/logger"
+	"github.com/kordyd/remember_me-golang/services/event_ingestion/internal/sender"
 	"os"
 	"os/signal"
 	"syscall"

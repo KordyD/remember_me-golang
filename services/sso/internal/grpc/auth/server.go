@@ -5,7 +5,7 @@ import (
 	"errors"
 	"github.com/google/uuid"
 	"github.com/kordyd/remember_me-golang/protos/gens/go/sso"
-	"github.com/kordyd/remember_me-golang/sso/internal/services/auth"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/services/auth"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

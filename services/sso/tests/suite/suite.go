@@ -3,7 +3,7 @@ package suite
 import (
 	"context"
 	"github.com/kordyd/remember_me-golang/protos/gens/go/sso"
-	"github.com/kordyd/remember_me-golang/sso/internal/config"
+	"github.com/kordyd/remember_me-golang/services/sso/internal/config"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"net"

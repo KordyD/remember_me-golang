@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/kordyd/remember_me-golang/event_ingestion/pkg/models"
+	"github.com/kordyd/remember_me-golang/services/event_ingestion/pkg/models"
 	"github.com/segmentio/kafka-go"
 	"log/slog"
 )
