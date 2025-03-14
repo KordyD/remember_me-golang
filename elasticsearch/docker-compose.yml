@@ -1,0 +1,13 @@
+services:
+  elasticsearch:
+    image: elasticsearch:8.17.3
+    environment:
+      - discovery.type=single-node
+      - ELASTIC_PASSWORD=
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+volumes:
+  elasticsearch_data:
